@@ -77,6 +77,11 @@ INSERT INTO colecao (Tipo, Nome, Genero, Nota, Favorito) VALUES
 - Abra o NetBeans > File > Open Project > Selecione a pasta clonada.
 - Execute a classe TelaPrincipal.java.
 
+4. Configure a Conexão com o Banco:
+- Navegue até a pasta `src/dao` e abra o arquivo `ConexaoDAO.java`.
+- Altere o usuário e a senha para corresponderem ao seu MySQL local.
+     > *Exemplo:* Se o seu MySQL local usa o usuário `root` e não tem senha, o código deve ficar algo como: `user = "root"`, `password = ""`.
+
 -----
 
 Desenvolvido por Angeline Izaura de Lima Melo.
