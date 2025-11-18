@@ -2,10 +2,6 @@
 
 Um sistema gerenciador de coleções pessoais desenvolvido em Java, permitindo organizar Livros, Filmes e Jogos, com funcionalidades de categorização e favoritos.
 
-## Demonstração
-
-![Tela Principal](<img width="611" height="435" alt="TelaPrincipal(EstanteVirtual)" src="https://github.com/user-attachments/assets/7b2cbc7d-3ea8-4630-a725-a1c7439d5268" />)
-
 ## Funcionalidades
 
 - **Cadastro Completo (CRUD):** Adicionar, visualizar, editar e excluir itens da coleção.
