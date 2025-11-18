@@ -49,34 +49,22 @@ O projeto utiliza o padrão de arquitetura em camadas:
 - Copie e rode o script abaixo no seu cliente SQL (MySQL Workbench, DBeaver, etc.):
 
 ```sql
--- 1. Cria o banco de dados 'EstanteVirtual'
+-- Banco de dados 'EstanteVirtual'
 CREATE DATABASE IF NOT EXISTS EstanteVirtual;
-
--- 2. Seleciona o banco de dados para uso
 USE EstanteVirtual;
 
--- 3. Cria a tabela 'colecao'
+-- Tabela 'colecao'
 CREATE TABLE colecao (
-    -- ID como chave primária e autoincremento
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    
     -- O tipo de item (apenas 'Livro', 'Filme' ou 'Jogo')
     Tipo ENUM('Livro', 'Filme', 'Jogo') NOT NULL, 
-    
-    -- O nome do item
     Nome VARCHAR(255) NOT NULL,
-    
-    -- O gênero do item
     Genero VARCHAR(100),
-    
-    -- A nota, que varia de 0.0 a 5.0
     Nota DECIMAL(2, 1) CHECK (Nota >= 0.0 AND Nota <= 5.0),
-    
-    -- Indica se é favorito (TRUE ou FALSE)
     Favorito BOOLEAN
 );
 
--- 4. Insere dados iniciais para teste
+-- Dados iniciais para teste
 INSERT INTO colecao (Tipo, Nome, Genero, Nota, Favorito) VALUES
 ('Livro', 'O Senhor dos Anéis: A Sociedade do Anel', 'Fantasia', 4.8, TRUE),
 ('Livro', '1984', 'Ficção Distópica', 4.5, TRUE),
